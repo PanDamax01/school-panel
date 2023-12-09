@@ -1,0 +1,94 @@
+@media (min-width: 380px) {
+	.edit {
+		padding: 0.4em 1.6em;
+	}
+}
+@media (min-width: 672px) {
+	.edit {
+		&__box-btn {
+			display: flex;
+			// display: none;  to delete
+			align-items: center;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+		}
+
+		&__btn--send{
+			margin-left: auto !important;
+			margin-right: 1.2em !important;
+		}
+	}
+}
+
+// @media (min-width: 576px) {
+// 	.sidebar {
+// 		width: 80px;
+
+// 		&__item {
+// 			padding: 0.6em 1.4em;
+// 		}
+// 	}
+
+// 	.navbar {
+// 		&__btn {
+// 			opacity: 1;
+// 			pointer-events: all;
+// 		}
+// 	}
+// }
+
+// @media (min-width: 300px) {
+// 	.footer {
+// 		font-size: 2rem;
+// 	}
+// }
+
+// @media (min-width: 651px) {
+// 	.school__logo {
+// 		margin: 0 0.4em 0 0;
+// 	}
+
+// 	.main {
+// 		&__row {
+// 			font-size: 2rem;
+
+// 			&--th {
+// 				font-size: 2.2rem;
+// 			}
+// 		}
+// 	}
+
+// 	.subsit {
+// 		&__row {
+// 			&--th {
+// 				font-size: 2.2rem;
+// 			}
+// 		}
+// 	}
+
+// 	.app__container {
+// 		.subsit {
+// 			&__row {
+// 				font-size: 1.8rem;
+
+// 				&--th {
+// 					font-size: 1.8rem;
+// 				}
+// 			}
+// 		}
+// 	}
+
+// 	// .app__box-img{
+// 	// 	justify-content: flex-start;
+// 	// }
+// }
+
+// @media (min-width: 768px) {
+// 	// .school {
+// 	// 	justify-content: space-between;
+// 	// }
+
+// 	// .app__btn-img {
+// 	// 	margin-bottom: 0;
+// 	// }
+// }

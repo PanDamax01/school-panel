@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>Panel</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,800;1,600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="dist/css/main.min.css">
+</head>
+
+<body class="panel-body">
+    <aside class="school">
+        <svg class="school__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" version="1.0" viewBox="19.1 31.0 57.8 34.0" zoomAndPan="magnify" style="fill: rgb(0, 0, 0);" original_string_length="1251"><g><g id="__id215_sz6cdm3g1hy"><path d="M71.2 65L19.1 65 19.1 39.1 47.6 53.3z" style="fill: rgb(0, 74, 173);"/></g></g><g><g id="__id216_sz6cdm3g1hy"><path d="M70.5 65L68.3 65 47.6 54.7 43.5 52.7 43.5 52.7 21.5 41.7 21.5 41.7 19.1 40.5 19.1 39.4 47.6 53.6 47.9 53.7 47.9 53.7z" style="fill: rgb(0, 74, 173);"/></g></g><g id="__id217_sz6cdm3g1hy"><path d="M45.4 61.3L46.7 58.9 47.6 57.3 21.5 41.7 21.5 41.7 19.1 40.3 19.1 48.6 20.7 49.4 20.7 58.8 33.3 65 52.9 65z" style="fill: rgb(0, 74, 173);"/></g><g id="__id218_sz6cdm3g1hy"><path d="M47.6,47.5v9.8l-2-1L19.1,43.1v-9.8L47.6,47.5z M23.5,47.3v9.8L39.3,65h19.6l-12.2-6.1L23.5,47.3z" style="fill: rgb(0, 74, 173);"/></g><g id="__id219_sz6cdm3g1hy"><path d="M30.3,36.6v1.1l-11.2-5.6V31L30.3,36.6z M48.8,51v1.1L74.7,65h2.2L48.8,51z M23.5,53l-2.8-1.4l-1.6-0.8V52 l1.6,0.8l2.8,1.4L45.3,65h2.2L23.5,53z M47.6,52.7L19.1,38.5v1.1l28.5,14.2L70.1,65h2.2L47.6,52.7z" style="fill: rgb(205, 215, 214);"/></g></svg>
+        <img src="dist/img/logo.png" alt="School Logo" class="school__logo">
+        
+        <svg class="school__svg school__svg--rotate" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 203 203" style="fill: rgb(0, 0, 0);" xml:space="preserve" original_string_length="671"><g id="__id3302_sz6cdm3g1hy"><polygon style="fill: rgb(0, 74, 173);" points="203,0 159.538,0 0,159.536 0,203  "/></g><g     id="__id3303_sz6cdm3g1hy"><polygon style="fill: rgb(0, 74, 173);" points="0,0 0,159.536      159.538,0  "/></g></svg>
+        <!-- bedzie sluzyc jako tez jakei wiadomosci -->
+        <p class="school__bell">Do końca <span class="school__subject">lekcji 1</span> - <span
+                class="school__timer">21min</span></p>
+    </aside>
+
+    <main>
+        <img src="dist/img/stain-one.png" class="stain stain--first">
+        <img src="dist/img/stain-one.png" class="stain stain--second">
+        <img src="dist/img/stain-two.png" class="stain stain--third">
+        <section class="main">
+            <div class="main__class">
+                <div class="main__box-table">
+                    <table class="main__table">
+                        <thead>
+                            <tr class="main__row main__row--th">
+                                <th class="main__cell main__cell">Klasa</th>
+                                <th class="main__cell main__cell">Sala</th>
+                            </tr>
+                        </thead>
+                        <tbody class="main__tbody">
+                            <tr class="main__row">
+                                <td class="main__cell">5bT</td>
+                                <td class="main__cell">23</td>
+                            </tr>
+                            <tr class="main__row">
+                                <td class="main__cell">4bT</td>
+                                <td class="main__cell">18</td>
+                            </tr>
+                            <tr class="main__row">
+                                <td class="main__cell">4bT</td>
+                                <td class="main__cell">18</td>
+                            </tr>
+                            <tr class="main__row">
+                                <td class="main__cell">4bT</td>
+                                <td class="main__cell">18</td>
+                            </tr>
+                            <tr class="main__row">
+                                <td class="main__cell">4bT</td>
+                                <td class="main__cell">18</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="main__gallery">
+                <ul class="main__carousel">
+                    <li class="main__card">
+                        <img src="../dist/img/exemplary.jpg" alt="Picture" class="main__img">
+                    </li>
+                    <li class="main__card">
+                        <img src="../dist/img/exemplary.jpg" alt="Picture" class="main__img">
+                    </li>
+                    <li class="main__card">
+                        <img src="../dist/img/exemplary.jpg" alt="Picture" class="main__img">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="main__news">
+                <span class="main__title">Ogłoszenia</span>
+                <p class="main__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos eius at accusantium
+                    provident culpa, aliquid asperiores tenetur deleniti, pariatur aspernatur vitae eligendi odio
+                    veritatis impedit maiores minus commodi adipisci architecto, necessitatibus minima sapiente eos
+                    voluptatum porro facere. Aperiam, iusto iure.</p>
+            </div>
+        </section>
+
+        <section class="subsit">
+            <span class="subsit__title">Zastępstwa</span>
+            <div class="subsit__box-table">
+                <table class="subsit__table">
+                    <thead>
+                        <tr class="subsit__row subsit__row--th">
+                            <th class="subsit__cell subsit__cell">Lekcja</th>
+                            <th class="subsit__cell subsit__cell">Nauczyciel</th>
+                            <th class="subsit__cell subsit__cell">Odział</th>
+                            <th class="subsit__cell subsit__cell">Przedmiot</th>
+                            <th class="subsit__cell subsit__cell">Sala</th>
+                            <th class="subsit__cell subsit__cell">Zastępca</th>
+                            <th class="subsit__cell subsit__cell">Okres</th>
+                        </tr>
+                    </thead>
+                    <tbody class="subsit__tbody">
+                        <tr class="subsit__row">
+                            <td class="subsit__cell">6</td>
+                            <td class="subsit__cell">maria gooolo</td>
+                            <td class="subsit__cell">4c</td>
+                            <td class="subsit__cell">matematyka</td>
+                            <td class="subsit__cell">26</td>
+                            <td class="subsit__cell">Piotd pawel</td>
+                            <td class="subsit__cell">29.09.2023</td>
+                        </tr>
+                        <tr class="subsit__row">
+                            <td class="subsit__cell">6</td>
+                            <td class="subsit__cell">maria gooolo</td>
+                            <td class="subsit__cell">4c</td>
+                            <td class="subsit__cell">leckja zredukowana</td>
+                            <td class="subsit__cell">26</td>
+                            <td class="subsit__cell">Piotd pawel</td>
+                            <td class="subsit__cell">29.09.2023</td>
+                        </tr>
+                        <tr class="subsit__row">
+                            <td class="subsit__cell">6</td>
+                            <td class="subsit__cell">maria gooolo</td>
+                            <td class="subsit__cell">4c</td>
+                            <td class="subsit__cell">lekcja zredukowana</td>
+                            <td class="subsit__cell">26</td>
+                            <td class="subsit__cell">Piotd pawel</td>
+                            <td class="subsit__cell">29.09.2023</td>
+                        </tr>
+                        <tr class="subsit__row">
+                            <td class="subsit__cell">6</td>
+                            <td class="subsit__cell">maria gooolo</td>
+                            <td class="subsit__cell">4c</td>
+                            <td class="subsit__cell">lekcja zredukowana</td>
+                            <td class="subsit__cell">26</td>
+                            <td class="subsit__cell">Piotd pawel</td>
+                            <td class="subsit__cell">29.09.2023</td>
+                        </tr>
+                        <tr class="subsit__row">
+                            <td class="subsit__cell">6</td>
+                            <td class="subsit__cell">maria gooolo</td>
+                            <td class="subsit__cell">4c</td>
+                            <td class="subsit__cell">lekcja zredukowana</td>
+                            <td class="subsit__cell">26</td>
+                            <td class="subsit__cell">Piotd pawel</td>
+                            <td class="subsit__cell">29.09.2023</td>
+                        </tr>
+                        <tr class="subsit__row">
+                            <td class="subsit__cell">6</td>
+                            <td class="subsit__cell">maria gooolo</td>
+                            <td class="subsit__cell">4c</td>
+                            <td class="subsit__cell">lekcja zredukowana</td>
+                            <td class="subsit__cell">26</td>
+                            <td class="subsit__cell">Piotd pawel</td>
+                            <td class="subsit__cell">29.09.2023</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <svg class="stain stain--fourth" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" version="1.0" viewBox="19.1 31.0 57.8 34.0" zoomAndPan="magnify" style="fill: rgb(0, 0, 0);" original_string_length="1251"><g><g id="__id215_sz6cdm3g1hy"><path d="M71.2 65L19.1 65 19.1 39.1 47.6 53.3z" style="fill: rgb(0, 74, 173);"/></g></g><g><g id="__id216_sz6cdm3g1hy"><path d="M70.5 65L68.3 65 47.6 54.7 43.5 52.7 43.5 52.7 21.5 41.7 21.5 41.7 19.1 40.5 19.1 39.4 47.6 53.6 47.9 53.7 47.9 53.7z" style="fill: rgb(0, 74, 173);"/></g></g><g id="__id217_sz6cdm3g1hy"><path d="M45.4 61.3L46.7 58.9 47.6 57.3 21.5 41.7 21.5 41.7 19.1 40.3 19.1 48.6 20.7 49.4 20.7 58.8 33.3 65 52.9 65z" style="fill: rgb(0, 74, 173);"/></g><g id="__id218_sz6cdm3g1hy"><path d="M47.6,47.5v9.8l-2-1L19.1,43.1v-9.8L47.6,47.5z M23.5,47.3v9.8L39.3,65h19.6l-12.2-6.1L23.5,47.3z" style="fill: rgb(0, 74, 173);"/></g><g id="__id219_sz6cdm3g1hy"><path d="M30.3,36.6v1.1l-11.2-5.6V31L30.3,36.6z M48.8,51v1.1L74.7,65h2.2L48.8,51z M23.5,53l-2.8-1.4l-1.6-0.8V52 l1.6,0.8l2.8,1.4L45.3,65h2.2L23.5,53z M47.6,52.7L19.1,38.5v1.1l28.5,14.2L70.1,65h2.2L47.6,52.7z" style="fill: rgb(205, 215, 214);"/></g></svg>
+    </main>
+
+    <footer class="footer">
+        <span class="footer__day">Poniedziałek, 21-03-2023</span>
+        <span class="footer__time">21:37</span>
+    </footer>
+    <script src="dist/js/main.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+@media (min-width: 768px) {
+    // ---- edit import class
+	.edit{
+        .school {
+            &__bell{
+                font-size: 2.4rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .app {
+        padding-left: 60px;
+    }
+
+	.sidebar {
+		width: 60px;
+	}
+
+	.navbar {
+        padding-right: 0.02%;
+
+		&__user {
+			padding: 0 1em;
+            width: auto;
+            border-right: 1px solid #ccc;
+			line-height: 60px;
+			opacity: 1;
+		}
+
+        &__log {
+            border: none;
+        }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+// @media (min-width: 768px) {
+//     .sidebar {
+// 		&.active {
+// 			width: 226px;
+// 		}
+// 	}
+// }
+
+// @media (min-width: 992px) {
+// 	.school {
+// 		padding: 1em 8vw;
+
+// 		&__bell {
+// 			padding: 0.2em 1.6em;
+// 			font-size: 2.6rem;
+// 		}
+// 	}
+
+// 	.footer {
+// 		padding: 0.4em 3em;
+// 	}
+// }
+
+// @media (min-width: 1200px) {
+// 	.school {
+// 		&__bell {
+// 			padding: 0.3em 2.6em 0.3em 1.6em;
+// 			transform: translateX(3vw);
+
+// 			&::before {
+// 				content: '';
+// 				position: absolute;
+// 				top: -13px;
+// 				right: -12px;
+// 				width: 72px;
+// 				height: 72px;
+// 				background-image: url('../img/icon/icon-bell.webp');
+// 				background-position: center;
+// 				background-size: cover;
+// 			}
+// 		}
+// 	}
+
+// 	.stain {
+// 		display: block;
+// 		position: absolute;
+// 		transform: translate(-50%, -50%);
+// 		z-index: 0;
+
+// 		&--first {
+// 			top: 42%;
+// 			left: 48%;
+// 			width: 30vw;
+// 		}
+
+// 		&--second {
+// 			left: 19%;
+// 			top: 48%;
+// 			width: 20vw;
+// 			transform: translate(-50%, -50%) rotate(196deg);
+// 		}
+
+// 		&--third {
+// 			left: 84%;
+// 			top: 44%;
+// 			width: 20vw;
+// 			height: 34vh;
+// 		}
+
+// 		&--fourth {
+// 			left: 0;
+// 			bottom: 0;
+// 			width: 10vw;
+// 		}
+// 	}
+
+// 	.main {
+// 		gap: 6vw;
+
+// 		&__title {
+// 			font-size: 2.4rem;
+// 		}
+// 	}
+
+// 	.subsit {
+// 		&__box-table {
+// 			height: 280px;
+// 			pointer-events: none;
+// 		}
+
+// 		&__tbody {
+// 			animation: scroll-up 12s ease-in-out infinite;
+// 		}
+// 	}
+
+// 	.app {
+// 		&__preview {
+// 			width: 70%;
+// 		}
+// 	}
+// }
+
+// @media (min-width: 1400px) {
+// 	.school {
+// 		&__svg {
+// 			display: block;
+
+// 			&--rotate {
+// 				left: calc(100% - 100px);
+// 				width: 100px;
+// 				height: 15%;
+// 				transform: rotate(180deg);
+// 			}
+// 		}
+// 	}
+// }

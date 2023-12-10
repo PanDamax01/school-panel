@@ -1,0 +1,185 @@
+{\rtf1\ansi\ansicpg1250\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fmodern\fcharset0 Courier;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red255\green255\blue255;
+\red0\green0\blue0;\red255\green255\blue255;\red255\green255\blue255;\red255\green255\blue255;\red223\green212\blue96;
+\red246\green246\blue239;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c99985\c0;\cssrgb\c100000\c100000\c100000\c0;
+\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c99985;\cssrgb\c100000\c100000\c100000;\cssrgb\c100000\c100000\c99985;\cssrgb\c89931\c85546\c44928;
+\cssrgb\c97255\c97255\c94902;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww23020\viewh12180\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs60 \cf0 Og\'f3lny wz\'f3r kt\'f3ry zwraca API.\
+ok: boolean\
+status: int\
+message: array, string\
+\
+Og\'f3lny czas \uc0\u380 ycia tokenu access_token To 45 minut.\
+Po 3 nieudanych pr\'f3bach u\uc0\u380 ytkownik nie b\u281 dzie m\'f3g\u322  zalogowa\u263  si\u281 , uratuje tylko i wy\u322 \u261 cznie usuni\u281 cia log\'f3w kt\'f3re s\u261  nie udane u wybranego u\u380 ytkownika :), a\u380  takie zabezpieczenie.\
+\
+Message:\
+- access_token: string\
+- refresh_token: string\
+- expirens_time: int\
+- datetime_expirens: datetime\
+- actual_time: datetime\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+Odpowiedzi kt\'f3re mog\uc0\u281  odda\u263  same message:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs22 \cf2 \cb3 \expnd0\expndtw0\kerning0
+"User not found", - U\uc0\u380 ytkownika nie znaleziono\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf2 "User is not active", - u\uc0\u380 ytkownik nie aktywny\
+"User does not have permissions", - U\uc0\u380 ytkownik nie posiada uprawnie\u324 \
+"Data has not been added", - dane nie zosta\uc0\u322 y dodane\
+"Data has not been update\'94, - dane nie zosta\uc0\u322 y aktualizowane.\
+"login required", - Login wymagany\
+"password required", - Has\uc0\u322 o wymagane\
+"login or password incorrect", - Login lub has\uc0\u322 o nie poprawne\
+"login and password required", - Login I has\uc0\u322 o wymagane\
+"refresh_token not found", - refresh_token nie znaleziono\
+\'94refresh_token required", - refresh_token wymagany\
+"User is blocked, and does not have permission to login", - U\uc0\u380 ytkownik jest zablokowany, nie ma uprawnie\u324  do logowania\
+"Login failed", - wyst\uc0\u261 pi\u322  b\u322 \u261 d podczas logowania\
+"Failed to log in after so many failed login attempts" - Nie uda\uc0\u322 o si\u281  zalogowa\u263  po wielu nieudanych pr\'f3bach logowania.\
+\'94text or url required\'94 - tekst lub url jest wymagany.\
+\'94\cb4 Default permissions are not defined in the settings\cb3 \'94 - W ustawieniach nie zosta\uc0\u322 o zdefiniowane domy\u347 lne uprawnienia.\
+\'94email is exist\'94 \'96 email isnieje.\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+POST: /api/Account/Authorize\
+Body: \
+login - required\
+password - required\
+Odpowied\uc0\u378  wygl\u261 da tak\
+Og\'f3lny wz\'f3r api.\
+access_token \'96 string\
+refresh_token _ string\
+expirens_time \'96 int\
+datetime_expirens \'96 datetime\
+Actual_datetime - datetime\
+\'97 access_token nale\uc0\u380 y zapisa\u263  w cookie, poniewa\u380  to klucz do zalogowania si\u281  do konta.\
+\'97 refresh_token nale\uc0\u380 y te\u380  zachowa\u263  poniewa\u380  on jest dla od\u347 wie\u380 anie access_token.\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+POST: /api/Account/RefreshToken\
+Body: \
+refresh_token - required\
+Odpowied\uc0\u378  wygl\u261 da tak\
+Og\'f3lny wz\'f3r api.\
+refresh_token _ string\
+expirens_time \'96 int\
+\'97 refresh_token nale\uc0\u380 y od\u347 wie\u380 y\u263  w cookie.\
+POST: /api/AccessRights/Edit\
+Body\
+access_token - required\
+id_access - required\
+- dalej musz\uc0\u281  dopracowa\u263 .\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+POST: /api/Announcements/Create\
+Body\
+access_token - string\
+text - string\
+url - string\
+start_date - unix\
+end_date - unix\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+POST: /api/Announcements/Delete\
+Body\
+id_announcements - int\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+POST: /api/Announcements/Edit\
+Body\
+id_announcements - int\
+access_token - string\
+text - string\
+url - string\
+start_date - unix\
+end_date - unix\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+POST: /api/AccessRights/Edit\
+Body:\
+id_access - int\
+access_token - int\
+"is_edit_access_rights" \
+"is_delete_access_rights" \
+"is_insert_access_rights" \
+"is_edit_announcements" \
+"is_delete_announcements"\
+"is_insert_announcements" \
+"is_edit_users" \
+"is_delete_users"\
+"is_edit_logo"\
+"is_edit_name_website"\
+is_view_users\
+ - wszystko true|false - bool\
+\
+GET: /api/AccessRights/View\
+Body: -\
+Pokazuje wszystkie uprawnienia jakie s\uc0\u261  w bazie.\
+\
+GET: /api/AccessRights/View/\{id\}\
+Body: -\
+Pokazuje poprzez wybrany id uprawnienia. \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+GET: /api/Home/byView\
+Body: -\
+Pokazuje warto\uc0\u347 ci jako array [ \'84nazwa_klasy\'94: \{ itp \} ]\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf5 \cb1 POST: /api/Replacements/Create\
+Body: \
+- access_token - required string\
+- lesson_number - optional int // numer lekcji\
+- teacher - required string // nauczyciel\
+- class - required string // klasa\
+- item - optional string // przedmiot\
+- class_number - optional int // sala, w kt\'f3rej musi odby\uc0\u263  si\u281  zaj\u281 cia.\
+- teacher_replacements - required string // Nauczyciel zast\uc0\u281 puj\u261 cy.\
+- datetime - optional int // Czas przesy\uc0\u322 any w sekundach. Je\u347 li nie b\u281 dzie przes\u322 any do domy\u347 lnie zrobi si\u281  na tera\u378 niejszy czas.\
+\
+Przyk\uc0\u322 adowa odpowied\u378  z serwera: \
+
+\f1\fs24 \cf2 \{"ok":true,"status":200,"message":\{"lesson_number":null,"teacher":"Wiktorx","class":"1A","item":"Zajecia","class_number":null,"teacher_replacements":"Barbara Nowak","datetime":1702133693,"id_replacements":1284200580\}\}\cf7 \
+
+\f0\fs22 \cf5  \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+POST: /api/Replacements/Create\
+Body: \
+- id_replacements int - required // id zast\uc0\u281 pstwa.\
+- access_token string - required.\
+\cf2 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+GET: /api/Home/byView/PhotoAll\
+Required: access_token string\
+Body: zwraca informacj\uc0\u281  o wszystkich zdj\u281 ciach w bazie danych.\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+POST: /api/Home/UpdateSettings\
+Body:\
+- event - string\
+- name_website - string\
+- 
+\f2 \cb4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec9 default_id_access_for_user - int\
+ORGANICZENIA - je\uc0\u347 li nie jest dozwolone zmiana name_website = to si\u281  nie zmieni.\
+POST: /api/Home/UpdateLogo\
+Body: \
+- image \'96 przesy\uc0\u322 anie zdj\u281 cia za pomoc\u261  name image.\
+POST: /api/Photo/Upload\
+Body: \
+- image - tak samo jak z update logo, name=image\
+\
+Mo\uc0\u380 na te\u380  skorzysta\u263  z funkcji.\
+GET: /api/Photo/image-upload\
+Body: -\
+Request: zwraca html, za pomoc\uc0\u261  kt\'f3rego mo\u380 na przes\u322 a\u263  image na serwer.\
+
+\f3\b\fs96 Je\uc0\u347 li chcesz wywo\u322 a\u263  zdj\u281 cia to we\u378  image_url = \'82jaka\u347 _nazwa.png|jpg|jpeg\'92.\
+To dodaj se /image/[nasze_zdjecie]\
+Na serwerze znajduje si\uc0\u281  tak [host]/image/[nazwa_zdj]
+\f2\b0\fs24 \cf10 \cb1 \strokec10 \
+
+\f0\fs22 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \
+\
+}

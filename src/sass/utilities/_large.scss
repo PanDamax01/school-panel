@@ -1,20 +1,25 @@
 // //to bedzie na telewizor podebne i bede sie bawil opcjami
-// @media (min-width: 1400px) {
-// 	.panel-body {
-// 		.school {
-// 			height: 10vh;
-// 		}
+@media (min-width: 1400px) {
+	.panel-body {
+		.school {
+            background-color: transparent;
+            
+			&__bell {
+				padding: 0.4em 1.6em;
+				font-size: 2.5rem;
+			}
+		}
 
-// 		.main {
-// 			height: 43vh;
-// 		}
+		// 	.main {
+		// 		height: 43vh;
+		// 	}
 
-// 		.subsit {
-// 			height: 42vh;
-// 		}
+		// 	.subsit {
+		// 		height: 42vh;
+		// 	}
 
-// 		.footer {
-// 			height: 5vh;
-// 		}
-// 	}
-// }
+		// 	.footer {
+		// 		height: 5vh;
+		// 	}
+	}
+}

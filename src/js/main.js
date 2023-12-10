@@ -5,7 +5,7 @@ let parentDiv, idImg = 0, idRow = 0
 const api = {
     log: 'https://api.pqwouriqwuo.ct8.pl/api/Account/Authorize',
     refreshToken: 'https://api.pqwouriqwuo.ct8.pl/api/Account/RefreshToken',
-    postDatabase: '',
+    postDatabase: 'https://api.pqwouriqwuo.ct8.pl/api',
 }
 
 const settings = {
@@ -313,7 +313,6 @@ const closeNewEvent = e => {
 const hideElementOnView = (e, index) => {
     e.target.classList.toggle('active')
     prev[index+1].classList.toggle('active')
-    console.log(index + 1);
     switch (index + 1) {
         case 1:
             return newData.klasy.hide = !newData.klasy.hide
@@ -447,7 +446,7 @@ const sendEditDateToServer = e => {
 
     const activeItem = sidebarItems.find(el => el.classList.contains('active')).textContent.trim()
     const dateToSend = createTaskData(activeItem)
-    sendDateToServer(dateToSend, e.target)
+    sendDateToServer(dateToSend, e.target, dateToSend.method)
 }
 
 const createTaskData = nameActiveTask => {
@@ -455,13 +454,14 @@ const createTaskData = nameActiveTask => {
 
     switch (nameActiveTask) {
         case 'Nagłówek':
-            return {name: 'naglowek', logo: newData.naglowek.logo, event: newData.naglowek.event }
+            return {name: 'naglowek', logo: newData.naglowek.logo, event: newData.naglowek.event, method: 'Settings/Edit' }
         case 'Klasy':
             return {name: 'klasy', hide: newData.klasy.hide, files: newData.naglowek.event }
         case 'Slider':
             return {name: 'slider', hide: newData.slider.hide, images: sliderUrls }
         case 'Ogłoszenia':
-            return {name: 'ogloszenia', hide: newData.ogloszenia.hide, text: newData.ogloszenia.text, poster: newData.ogloszenia.poster }
+            return {name: 'ogloszenia', hide: newData.ogloszenia.hide, text: newData.ogloszenia.text, poster: newData.ogloszenia.poster, 
+            method: 'Announcements/Create'}
         case 'Zastepstwa':
             return {name: 'zastepstwa', hide: newData.zastepstwa.hide, tablica: newData.zastepstwa.tablica }
     
@@ -470,13 +470,15 @@ const createTaskData = nameActiveTask => {
     }
 }
 
-const sendDateToServer = async (data, button) => {
+const sendDateToServer = async (data, button, method) => {
     button.disabled = true
     button.classList.add('loading')
 
+    data.access_token = getCookie();
     if (data === null) return
+    console.log(data);
     try {
-        const response = await fetch('url_do_serwera', {
+        const response = await fetch(api.postDatabase + '/' + method, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
